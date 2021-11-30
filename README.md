@@ -1,5 +1,5 @@
 <div align="center">
-<h1>XML DOM</h1>
+<h1>XML DOM with extra utilities</h1>
 </div>
 
 ![](https://img.shields.io/github/package-json/v/Ziphil/ZenmlXmldom)
