@@ -7,7 +7,8 @@
 
 
 ## Overview
-To be written.
+This package reexports everything from `@xmldom/xmldom` together with extra utilities for manipulating XML structures.
+Note that if you import this package, the classes regarding DOM (such as `Element` and `Text`) will be automatically extended with extra methods, so please use it with caution.
 
 This is a part of the [ZenML](https://github.com/Ziphil/Zenml) infrastructure.
 
