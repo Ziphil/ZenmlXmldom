@@ -29,6 +29,7 @@ function getDescendantTexts(this: Element): Array<Text> {
   return texts;
 }
 
+Element.prototype.getChildElements = getChildElements;
 Element.prototype.getDescendantTexts = getDescendantTexts;
 
 
