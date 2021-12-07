@@ -15,7 +15,10 @@
     "prepare": "tsc --project tsconfig-build.json"
   },
   "eslintConfig": {
-    "extends": "ziphil"
+    "extends": "ziphil",
+    "rules": {
+      "@typescript-eslint/prefer-function-type": "off"
+    }
   },
   "jest": {
     "testMatch": [
@@ -48,6 +51,6 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "@xmldom/xmldom": "^0.7.5"
+    "xmldom": "^0.6.0"
   }
 }

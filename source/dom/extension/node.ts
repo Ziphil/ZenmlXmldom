@@ -4,15 +4,15 @@ import "../constructor";
 
 
 function isElement(this: Node): boolean {
-  return this.nodeType === Node.ELEMENT_NODE;
+  return this.nodeType === 1;
 }
 
 function isText(this: Node): boolean {
-  return this.nodeType === Node.TEXT_NODE;
+  return this.nodeType === 3;
 }
 
 function isComment(this: Node): boolean {
-  return this.nodeType === Node.COMMENT_NODE;
+  return this.nodeType === 8;
 }
 
 Node.prototype.isElement = isElement;

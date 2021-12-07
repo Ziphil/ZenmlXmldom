@@ -7,7 +7,7 @@ function getChildElements(this: Element, tagName: string): Array<Element> {
   let nodes = this.childNodes;
   let elements = [];
   for (let i = 0 ; i < nodes.length ; i ++) {
-    let node = nodes.item(i);
+    let node = nodes.item(i)!;
     if (node.isElement() && node.tagName === tagName) {
       elements.push(node);
     }
@@ -17,7 +17,9 @@ function getChildElements(this: Element, tagName: string): Array<Element> {
 
 function getDescendantTexts(this: Element): Array<Text> {
   let texts = [];
-  for (let child of Array.from(this.childNodes)) {
+  let children = this.childNodes;
+  for (let i = 0 ; i < children.length ; i ++) {
+    let child = children.item(i)!;
     if (child.isText()) {
       texts.push(child);
     } else if (child.isElement()) {
