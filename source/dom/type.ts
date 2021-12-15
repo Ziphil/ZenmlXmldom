@@ -28,6 +28,15 @@ declare global {
     readonly attributes: NamedNodeMap;
     readonly ownerDocument: Document | null;
     readonly namespaceURI: string | null;
+    appendChild<T extends Node>(child: T): T;
+    insertBefore<T extends Node>(child: T, refChild: Node | null): T;
+    replaceChild<T extends Node>(newChild: Node, oldChild: T): T;
+    removeChild<T extends Node>(child: T): T;
+    hasChildNodes(): boolean;
+    hasAttributes(): boolean;
+    cloneNode(deep?: boolean): this;
+    normalize(): void;
+    isSupported(feature: string, version: string): boolean;
     isDefaultNamespace(namespace: string | null): boolean;
     lookupNamespaceURI(prefix: string | null): string | null;
   }
