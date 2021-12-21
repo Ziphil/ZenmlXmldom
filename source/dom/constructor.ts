@@ -2,7 +2,7 @@
 
 import {
   DOMImplementation
-} from "xmldom";
+} from "@xmldom/xmldom";
 
 
 let implementation = new DOMImplementation();
