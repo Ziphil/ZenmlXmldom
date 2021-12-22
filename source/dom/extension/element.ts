@@ -3,6 +3,19 @@
 import "../constructor";
 
 
+function insertFirst<N extends Node>(this: Element, child: N): N {
+  let firstChild = this.firstChild;
+  if (firstChild !== null) {
+    return this.insertBefore(child, firstChild);
+  } else {
+    return this.appendChild(child);
+  }
+}
+
+function insertLast<N extends Node>(this: Element, child: N): N {
+  return this.appendChild(child);
+}
+
 function getChildElements(this: Element, tagName: string): Array<Element> {
   let nodes = this.childNodes;
   let elements = [];
@@ -29,6 +42,8 @@ function getDescendantTexts(this: Element): Array<Text> {
   return texts;
 }
 
+Element.prototype.insertFirst = insertFirst;
+Element.prototype.insertLast = insertLast;
 Element.prototype.getChildElements = getChildElements;
 Element.prototype.getDescendantTexts = getDescendantTexts;
 
@@ -36,6 +51,8 @@ Element.prototype.getDescendantTexts = getDescendantTexts;
 declare global {
 
   interface Element {
+    insertFirst: typeof insertFirst;
+    insertLast: typeof insertLast;
     getChildElements: typeof getChildElements;
     getDescendantTexts: typeof getDescendantTexts;
   }
