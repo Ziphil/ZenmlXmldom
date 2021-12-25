@@ -11,6 +11,8 @@ let element = document.createElement("dummy");
 let text = document.createTextNode("dummy");
 let comment = document.createComment("dummy");
 
+let global = globalThis as any;
+
 global.Node ??= require("@xmldom/xmldom/lib/dom").Node;
 global.Element ??= element.constructor as any;
 global.Text ??= text.constructor as any;
