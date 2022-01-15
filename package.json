@@ -1,6 +1,6 @@
 {
   "name": "@zenml/xmldom",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Ziphil",
   "description": "XML DOM manipulation and utilities",
   "homepage": "https://github.com/Ziphil/ZenmlXmldom",
