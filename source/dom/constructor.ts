@@ -5,13 +5,13 @@ import {
 } from "@xmldom/xmldom";
 
 
-let implementation = new DOMImplementation();
-let document = implementation.createDocument(null, null, null);
-let element = document.createElement("dummy");
-let text = document.createTextNode("dummy");
-let comment = document.createComment("dummy");
+const implementation = new DOMImplementation();
+const document = implementation.createDocument(null, null, null);
+const element = document.createElement("dummy");
+const text = document.createTextNode("dummy");
+const comment = document.createComment("dummy");
 
-let global = globalThis as any;
+const global = globalThis as any;
 
 global.Node ??= require("@xmldom/xmldom/lib/dom").Node;
 global.Element ??= element.constructor as any;

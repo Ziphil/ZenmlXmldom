@@ -4,7 +4,7 @@ import "../constructor";
 
 
 function insertFirst<N extends Node>(this: Element, child: N): N {
-  let firstChild = this.firstChild;
+  const firstChild = this.firstChild;
   if (firstChild !== null) {
     return this.insertBefore(child, firstChild);
   } else {
@@ -17,10 +17,10 @@ function insertLast<N extends Node>(this: Element, child: N): N {
 }
 
 function getChildElements(this: Element, tagName: string): Array<Element> {
-  let nodes = this.childNodes;
-  let elements = [];
+  const nodes = this.childNodes;
+  const elements = [];
   for (let i = 0 ; i < nodes.length ; i ++) {
-    let node = nodes.item(i)!;
+    const node = nodes.item(i)!;
     if (node.isElement() && node.tagName === tagName) {
       elements.push(node);
     }
@@ -29,10 +29,10 @@ function getChildElements(this: Element, tagName: string): Array<Element> {
 }
 
 function getDescendantTexts(this: Element): Array<Text> {
-  let texts = [];
-  let children = this.childNodes;
+  const texts = [];
+  const children = this.childNodes;
   for (let i = 0 ; i < children.length ; i ++) {
-    let child = children.item(i)!;
+    const child = children.item(i)!;
     if (child.isText()) {
       texts.push(child);
     } else if (child.isElement()) {
