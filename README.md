@@ -17,3 +17,9 @@ Install via [npm](https://www.npmjs.com/package/@zenml/xmldom).
 ```
 npm i @zenml/xmldom
 ```
+
+## Version compatibility
+| `@zenml/xmldom` | `@xmldom/xmldom` |
+|:--:|:--:|
+| 1.1.0 | 0.8.6 |
+| 1.0.0 | 0.7.5 |
